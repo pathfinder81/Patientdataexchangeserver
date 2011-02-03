@@ -1,0 +1,50 @@
+Patient Data Exchange Server
+
+Installation Instructions:
+
+Download the debian package from the following url.
+
+http://dl.dropbox.com/u/3479115/exchangeserver.deb
+
+Currently the package only supports ubuntu 10.04 and above. For older versions of Ubuntu, you have to manually install tomcat6 from their website.
+http://tomcat.apache.org/download-60.cgi
+
+The package will install all the dependencies that the Exchange Server needs.
+
+System Requirements:
+To run the exchange server you need to have the following system requirements
+1. Operating System: Ubuntu 10.04 or later
+2. Memory: 3 Gb of RAM
+3. Hard Disk Space: Minumum 20GB
+3. Apache2 server (>= 2.2.14-4)
+4. Tomcat6 (>=6.0.24-2)
+5. Mysql-server (>=5.1.41-3)
+6. OpenJDK Runtime Environment (IcedTea6 1.8.1) (6b18-1.8.1-0ubuntu1) and   Jave Runtime Environment
+7. Internet Browser
+
+Specification of Server
+1) CPU:- Dual Intel Xeon Quad Core 2.8 Ghz or more, 1333 Mhz FSB, 12 mb cache.
+2) Memory:- 8192 mb DDR 1333 Mhz.
+3) Harddrive :- 4*500 GB harddirve 15000 rpm SATA harddrive
+4) NIC: Dual Port GB NIC
+5) Operating System : Ubuntu 9.10
+6) Database Server : Mysql 5.1.37
+7) Webserver: Apache 2.0
+8) Webcontainer:Tomcat 6.0
+
+
+
+
+
+Steps to follow during the Installation:
+1. The installation might take a long time, so please be patient.
+2. If the installation takes forever, please check that you have the best ubuntu server for your location by going to System>Administration>Software Sour   ces. Then Select Best Server.
+3. During the installation, the wizard will ask you for mysql password. Keep in mind to use the default password "signature".
+
+
+Steps to follow after the Installation:
+1. After the installation is complete, Open the terminal and type "database-setup.sh" to setup the database for the exchangeserver.
+2. After that type "xdeploy" to deploy the war file.
+3. Go to your browser, and type http://localhost:8080/projecthl7 to use the exchange server
+4. Go to your browser, and type http://localhost:8080/New to use the message exchanging interface
+

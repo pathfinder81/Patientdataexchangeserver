@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://DefaultNamespace" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="authentication">
+    <complexType>
+     <sequence>
+      <element name="user" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="authenticationResponse">
+    <complexType>
+     <sequence>
+      <element name="authenticationReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="partener">
+    <complexType>
+     <sequence>
+      <element name="users" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="partenerResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="partenerReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="emailfinder">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="emailfinderResponse">
+    <complexType>
+     <sequence>
+      <element name="emailfinderReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="uplaod">
+    <complexType>
+     <sequence>
+      <element name="upl" type="xsd:base64Binary"/>
+      <element name="fname" type="xsd:string"/>
+      <element name="recpt" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="uplaodResponse">
+    <complexType/>
+   </element>
+   <element name="sendemail">
+    <complexType>
+     <sequence>
+      <element name="receiptent" type="xsd:string"/>
+      <element name="firstname" type="xsd:string"/>
+      <element name="lastname" type="xsd:string"/>
+      <element name="age" type="xsd:string"/>
+      <element name="sex" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sendemailResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="authenticationRequest">
+
+      <wsdl:part element="impl:authentication" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sendemailResponse">
+
+      <wsdl:part element="impl:sendemailResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sendemailRequest">
+
+      <wsdl:part element="impl:sendemail" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="emailfinderResponse">
+
+      <wsdl:part element="impl:emailfinderResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="partenerRequest">
+
+      <wsdl:part element="impl:partener" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="uplaodResponse">
+
+      <wsdl:part element="impl:uplaodResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="uplaodRequest">
+
+      <wsdl:part element="impl:uplaod" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="emailfinderRequest">
+
+      <wsdl:part element="impl:emailfinder" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="partenerResponse">
+
+      <wsdl:part element="impl:partenerResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="authenticationResponse">
+
+      <wsdl:part element="impl:authenticationResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Authenticate">
+
+      <wsdl:operation name="authentication">
+
+         <wsdl:input message="impl:authenticationRequest" name="authenticationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:authenticationResponse" name="authenticationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="partener">
+
+         <wsdl:input message="impl:partenerRequest" name="partenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:partenerResponse" name="partenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="emailfinder">
+
+         <wsdl:input message="impl:emailfinderRequest" name="emailfinderRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:emailfinderResponse" name="emailfinderResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="uplaod">
+
+         <wsdl:input message="impl:uplaodRequest" name="uplaodRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:uplaodResponse" name="uplaodResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sendemail">
+
+         <wsdl:input message="impl:sendemailRequest" name="sendemailRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:sendemailResponse" name="sendemailResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="AuthenticateSoapBinding" type="impl:Authenticate">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="authentication">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="authenticationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="authenticationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="partener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="partenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="partenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="emailfinder">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="emailfinderRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="emailfinderResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="uplaod">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="uplaodRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="uplaodResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sendemail">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sendemailRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sendemailResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="AuthenticateService">
+
+      <wsdl:port binding="impl:AuthenticateSoapBinding" name="Authenticate">
+
+         <wsdlsoap:address location="http://localhost:8080/Offlineexchange/services/Authenticate"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

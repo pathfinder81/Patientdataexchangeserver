@@ -1,0 +1,33 @@
+Development guide 
+
+To access the source code in Github, you first must have git installed in your native system.
+If you are a ubuntu user, you can simply install git by typing the following command in the terminal.
+ 1. sudo apt-get install git-core
+
+ To setup a branch of Patient Data Exchange Server in your system
+
+ type the following in your terminal,
+
+ 1) for read + write access
+          "git clone git@github.com:milin/Patient-Data-Exchange-Server.git"
+
+ 2) for read only access 
+          "git://github.com/milin/Patient-Data-Exchange-Server.git"
+
+ For developers, you probably have to be included in the colaborators li
+ sts and then you can have the read + write access after I put your ssh public keys in github.
+
+
+ For development purposes, you will need apache2,tomcat6, and mysql-serve
+ r.But if you download the exchangeserver package all these dependencies
+ will be automatically installed in your system. Just be sure to use the
+ default password "signature" for the mysql-server installation when the
+ wizard prompts you to enter the password.
+ 
+ Pushing changes to the main branch.
+
+ Once collaborator status has been given to you, you can push your changes to the code using the following command.
+
+ git push origin master.
+
+ If you are not on the collaborator status, meaning you have just forked the project and you want some of your changes to  be integrated with the main branch, you can send a pull request to the admin.

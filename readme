@@ -34,7 +34,7 @@ Specification of Server
 
 
 Manual Installation
-1) Download the Patient Data Exchnage Server from Giithub https://github.com/pathfinder81/Patientdataexchangeserver
+1) Download the Patient Data Exchnage Server from Github https://github.com/pathfinder81/Patientdataexchangeserver
 2) Install Tomcat,Mysql  Server,java,ANT
 3) Make Change the hibernate.cfg.xml file which is in webapp/projecthl7/src enter your mysql username and password
 4) Make change in build.xml file provide the location of your tomcat server.

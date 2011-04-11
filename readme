@@ -33,7 +33,20 @@ Specification of Server
 8) Webcontainer:Tomcat 6.0
 
 
-
+Manual Installation
+1) Download the Patient Data Exchnage Server from Github https://github.com/pathfinder81/Patientdataexchangeserver
+2) Install Tomcat,Mysql  Server,java,ANT
+3) Make Change the hibernate.cfg.xml file which is in webapp/projecthl7/src enter your mysql username and password
+4) Make change in build.xml file provide the location of your tomcat server.
+5) Use ANT to make a war file which will generate projecthl7.war file in dest folder.
+6) Copy that projecthl7.war file in tomcat webapp folder.
+7) Create the database projecthl7 manually as any CMS.
+    The default database configuration
+    DBName = projecthl7
+    DBUser = root
+    DNpassword = 1234
+8) Insert the database Admin,City and Country in database 
+9) Go to your browser and enter http://localhost:8080/projecthl7
 
 
 Steps to follow during the Installation:

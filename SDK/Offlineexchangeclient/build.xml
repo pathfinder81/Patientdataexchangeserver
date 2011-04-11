@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Offlineexchangeclient">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/root/Desktop/Offlineclient.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="DefaultNamespace.Offlineexchange"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="/root/workspace/Offlineexchangeclient/build/classes"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/annotations-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/catalina-ant.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/catalina-ha.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/catalina-tribes.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/catalina.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/el-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/jasper-el.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/jasper-jdt.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/jasper.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/jsp-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/servlet-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/tomcat-coyote.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/tomcat-dbcp.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/tomcat-i18n-es.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/tomcat-i18n-fr.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/tomcat6/lib/tomcat-i18n-ja.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/root/workspace/Offlineexchangeclient/WebContent/WEB-INF/lib/axis.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/root/workspace/Offlineexchangeclient/WebContent/WEB-INF/lib/commons-discovery-0.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/root/workspace/Offlineexchangeclient/WebContent/WEB-INF/lib/commons-logging.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/root/workspace/Offlineexchangeclient/WebContent/WEB-INF/lib/jaxrpc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/root/workspace/Offlineexchangeclient/WebContent/WEB-INF/lib/saaj.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/root/workspace/Offlineexchangeclient/WebContent/WEB-INF/lib/wsdl4j.jar"/>
+        </jar>
+    </target>
+</project>

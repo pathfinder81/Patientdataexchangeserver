@@ -1,12 +1,12 @@
-<project name="SDK" default="deploy" basedir=".">
+<project name="Offlineexchange" default="deploy" basedir=".">
     <description>
-        SDK using SOAP initial final project
+        Web Application Devlopment Initial Final Project with Hibernate
     </description>
-  <!-- set global properties for this build apurba -->
+  <!-- set global properties for this build -->
   <property name="src" location="src"/>
-  <property name="build" location="classes"/>
+  <property name="build" location="build/classes"/>
   <property name="dist" location="dist"/>
-  <property name="web" location="web"/>
+  <property name="web" location="WebContent"/>
   <property name="tomcat.home" location="/opt/tomcat6"/>
   <property name="tomcat.webapps" location="${tomcat.home}/webapps"/>
   <property name="web.app" location="${web}"/>
@@ -37,7 +37,7 @@
         description="compile the source " >
     <!-- Compile the java code from ${src} into ${build} -->
     <javac srcdir="${src}" destdir="${build}" encoding="UTF-8" classpathref="project.class.path"/>
-  	<native2ascii encoding="UTF-8" src="${src}" dest="${src}"
+  	<native2ascii encoding="UTF-8" src="${src}" dest="${srtomcat.homec}"
   	   includes="**/*.src" ext=".properties"/>
 	<copy todir="${web.app.classes}">
 		<fileset dir="${build}">
@@ -50,7 +50,7 @@
   </target>
 	
   <target name="war" depends="compile"
-        description="make a war filfile:/home/conanx/Desktop/projuctUbuntu/project1/webe from the web directory" >
+        description="make a war file from the web directory" >
   	
     <jar destfile="${dist}/${war.file.name}"
          basedir="${web}"

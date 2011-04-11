@@ -39,14 +39,20 @@ Manual Installation
 3) Make Change the hibernate.cfg.xml file which is in webapp/projecthl7/src enter your mysql username and password
 4) Make change in build.xml file provide the location of your tomcat server.
 5) Use ANT to make a war file which will generate projecthl7.war file in dest folder.
-6) Copy that projecthl7.war file in tomcat webapp folder.
+6) Copy that projecthl7.war file in tomcat webapp folder. 
 7) Create the database projecthl7 manually as any CMS.
     The default database configuration
     DBName = projecthl7
     DBUser = root
-    DNpassword = 1234
+    DBpassword = 1234
 8) Insert the database Admin,City and Country in database 
 9) Go to your browser and enter http://localhost:8080/projecthl7
+10) Default Admin username and password is admin.
+11) To deploy a webservice, use ANT to generate a Offlineexchange.war file and deploy to your tomcat server.
+12) To check whether a webservices are up and running got to the http://localhost:8080/Offlineexchange/services
+13) Then use Offlineexchangeclient to exchange to patient data.
+
+For further information about how to use Exchange server and SDK please refer to manual.
 
 
 Steps to follow during the Installation:
@@ -59,5 +65,4 @@ Steps to follow after the Installation:
 1. After the installation is complete, Open the terminal and type "database-setup.sh" to setup the database for the exchangeserver.
 2. After that type "xdeploy" to deploy the war file.
 3. Go to your browser, and type http://localhost:8080/projecthl7 to use the exchange server
-4. Go to your browser, and type http://localhost:8080/New to use the message exchanging interface
 

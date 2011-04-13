@@ -1,26 +1,7 @@
 Patient Data Exchange Server
 
-Installation Instructions:
 
-Download the debian package from the following url.
 
-http://dl.dropbox.com/u/3479115/exchangeserver.deb
-
-Currently the package only supports ubuntu 10.04 and above. For older versions of Ubuntu, you have to manually install tomcat6 from their website.
-http://tomcat.apache.org/download-60.cgi
-
-The package will install all the dependencies that the Exchange Server needs.
-
-System Requirements:
-To run the exchange server you need to have the following system requirements
-1. Operating System: Ubuntu 10.04 or later
-2. Memory: 3 Gb of RAM
-3. Hard Disk Space: Minumum 20GB
-3. Apache2 server (>= 2.2.14-4)
-4. Tomcat6 (>=6.0.24-2)
-5. Mysql-server (>=5.1.41-3)
-6. OpenJDK Runtime Environment (IcedTea6 1.8.1) (6b18-1.8.1-0ubuntu1) and   Jave Runtime Environment
-7. Internet Browser
 
 Specification of Server
 1) CPU:- Dual Intel Xeon Quad Core 2.8 Ghz or more, 1333 Mhz FSB, 12 mb cache.

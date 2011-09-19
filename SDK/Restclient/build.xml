@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Rectclient with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/root/Desktop/Restclient/Rest.jar">
+            <manifest>
+                <attribute name="Main-Class" value="projecthl7.client.Testclient1"/>
+                <attribute name="Class-Path" value=". rest_lib/tomcat-dbcp.jar rest_lib/tomcat-i18n-es.jar rest_lib/annotations-api.jar rest_lib/tomcat-i18n-ja.jar rest_lib/catalina-ant.jar rest_lib/ecj-3.3.1.jar rest_lib/jsp-api.jar rest_lib/servlet-api.jar rest_lib/jasper.jar rest_lib/catalina-tribes.jar rest_lib/tomcat-i18n-fr.jar rest_lib/el-api.jar rest_lib/catalina.jar rest_lib/tomcat-coyote.jar rest_lib/jasper-el.jar rest_lib/catalina-ha.jar rest_lib/activation-1.1.jar rest_lib/asm-3.1.jar rest_lib/jackson-core-asl-1.7.1.jar rest_lib/jackson-jaxrs-1.7.1.jar rest_lib/jackson-mapper-asl-1.7.1.jar rest_lib/jackson-xc-1.7.1.jar rest_lib/jersey-archive-1.8.zip rest_lib/jersey-client-1.8.jar rest_lib/jersey-core-1.8.jar rest_lib/jersey-json-1.8.jar rest_lib/jersey-multipart-1.8.jar rest_lib/jersey-server-1.8.jar rest_lib/jettison-1.1.jar rest_lib/jsr311-api-1.1.1.jar rest_lib/mail-1.4.jar rest_lib/mimepull-1.3.jar rest_lib/mysql-connector-java-5.1.13-bin.jar"/>
+            </manifest>
+            <fileset dir="/root/Desktop/Restclient/build/classes"/>
+        </jar>
+        <delete dir="/root/Desktop/Restclient/rest_lib"/>
+        <mkdir dir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/tomcat-dbcp.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/tomcat-i18n-es.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/annotations-api.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/tomcat-i18n-ja.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/catalina-ant.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/ecj-3.3.1.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/jsp-api.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/servlet-api.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/jasper.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/catalina-tribes.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/tomcat-i18n-fr.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/el-api.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/catalina.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/tomcat-coyote.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/jasper-el.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+        <copy file="/opt/tomcat6/lib/catalina-ha.jar" todir="/root/Desktop/Restclient/rest_lib"/>
+         <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/activation-1.1.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/asm-3.1.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jackson-core-asl-1.7.1.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jackson-jaxrs-1.7.1.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jackson-mapper-asl-1.7.1.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jackson-xc-1.7.1.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jersey-archive-1.8.zip" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jersey-client-1.8.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jersey-core-1.8.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jersey-json-1.8.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jersey-multipart-1.8.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jersey-server-1.8.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jettison-1.1.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/jsr311-api-1.1.1.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/mail-1.4.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/mimepull-1.3.jar" todir="/root/Desktop/rest_lib"/>
+        <copy file="/root/workspace/Restclient/WebContent/WEB-INF/lib/mysql-connector-java-5.1.13-bin.jar" todir="/root/Desktop/rest_lib"/> 
+    </target>
+</project>

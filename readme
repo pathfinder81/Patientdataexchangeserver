@@ -47,3 +47,20 @@ Steps to follow after the Installation:
 2. After that type "xdeploy" to deploy the war file.
 3. Go to your browser, and type http://localhost:8080/projecthl7 to use the exchange server
 
+How to call REST APIS ?
+ Inorder to call a REST API for authentication,sendpatientdata and requestpatientdata
+ 
+For authentication
+   http://138.47.102.35:8080/PaDESRestAPI/authentication which accept a form and two form field username and password and returns
+   true if success.
+
+For requestpatientdata
+   "http://138.47.102.35:8080/PaDESRestAPI/requestpatientdata" which accept a form and seven form field firstname,lastname,age,sex,address
+    partner,user 
+
+For sendpatientdata
+   "http://138.47.102.35:8080/PaDESRestAPI/senpatientdata" which accept a multipart form data and have two field one for partner another for filedata.
+
+
+
+
